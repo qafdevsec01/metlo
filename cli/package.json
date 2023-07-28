@@ -29,7 +29,7 @@
     "ts-node": "^10.9.1"
   },
   "dependencies": {
-    "@aws-sdk/client-ec2": "^3.198.0",
+    "@aws-sdk/client-ec2": "^3.367.0",
     "@aws-sdk/client-sts": "^3.198.0",
     "@google-cloud/compute": "^3.5.1",
     "@metlo/testing": "^0.3.7",
