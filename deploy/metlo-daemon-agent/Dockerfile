@@ -21,7 +21,7 @@ COPY ../../ingestors/rust-common/ rust-common
 RUN cd govxlan && go build -o metlo-pcap
 RUN mv govxlan/metlo-pcap metlo-pcap
 
-FROM --platform=linux/amd64 alpine:3.17.0
+FROM --platform=linux/amd64 alpine:3.17.5
 
 RUN apk update
 RUN apk add bash libpcap-dev libpcap openssl-dev libc6-compat libgcc
