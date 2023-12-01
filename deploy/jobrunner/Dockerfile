@@ -1,4 +1,4 @@
-FROM node:alpine AS builder
+FROM node:21.2-alpine3.18 AS builder
 
 WORKDIR /usr/src/app
 
@@ -13,7 +13,7 @@ WORKDIR /usr/src/app/backend
 RUN yarn
 RUN yarn build
 
-FROM node:alpine
+FROM node:21.2-alpine3.18
 
 WORKDIR /usr/src/app
 
