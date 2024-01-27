@@ -1,4 +1,4 @@
-FROM node:alpine AS builder
+FROM node:21.6.0-alpine3.19 AS builder
 
 RUN apk add --no-cache libc6-compat
 
@@ -17,7 +17,7 @@ RUN echo 'NODE_ENV=production' >> .env
 RUN yarn install --frozen-lockfile
 RUN yarn build
 
-FROM node:alpine
+FROM node:21.6.0-alpine3.19
 
 WORKDIR /usr/src/app
 
