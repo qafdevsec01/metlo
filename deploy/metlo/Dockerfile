@@ -1,4 +1,4 @@
-FROM node:alpine AS builder
+FROM node:21.6.0-alpine3.19 AS builder
 
 WORKDIR /usr/src/app
 
@@ -20,7 +20,7 @@ RUN echo 'NODE_ENV=production' >> .env
 RUN yarn install --frozen-lockfile
 RUN yarn build
 
-FROM node:alpine
+FROM node:21.6.0-alpine3.19
 
 RUN apk update && apk add supervisor redis postgresql postgresql-contrib bash su-exec
 
